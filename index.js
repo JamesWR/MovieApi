@@ -24,9 +24,7 @@ app.get('/api/search', async (req, res, next) => {
 })
 app.get('/api/movie/:movieId', async (req, res, next) => {
     try {
-        // res.send(req.params)
         const result = await movie.get(req, res)
-
         res.json(result.data)
     } catch (e) {
         next(e)
