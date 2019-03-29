@@ -1,0 +1,10 @@
+{
+  "name": "MovieFinder",
+  "version": "1.0.0",
+  "description": "A page and api for finding movies",
+  "main": "index.js",
+  "repository": "https://github.com/JamesWR/MovieApi.git",
+  "author": "JamesWR <jwolzromberger@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
