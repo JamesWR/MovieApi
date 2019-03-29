@@ -6,5 +6,21 @@
   "repository": "https://github.com/JamesWR/MovieApi.git",
   "author": "JamesWR <jwolzromberger@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "axios": "^0.18.0",
+    "eslint": "^5.15.3",
+    "express": "^4.16.4",
+    "http": "^0.0.0",
+    "nodemon": "^1.18.10",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {}
 }
