@@ -40,6 +40,7 @@ export default {
 
 <template>
   <div>
+    <span> Search: </span>
     <input v-model="search" @input="updateSearch">
     <div v-for="movie in movies" :key="movie.id">
       <router-link :to="{ name: 'movie', params: { id: movie.id} }">
