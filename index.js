@@ -16,6 +16,7 @@ app.get('/api/popular', async (req, res, next) => {
 })
 app.get('/api/search', async (req, res, next) => {
     try {
+        console.log(req.query)
         const result = await search.get(req, res)
         res.json(result.data)
     } catch (e) {
@@ -30,11 +31,11 @@ app.get('/api/movie/:movieId', async (req, res, next) => {
         next(e)
     }
 })
-app.use('/home/', express.static(path.join(__dirname, 'client/dist')))
+app.use('/', express.static(path.join(__dirname, '/client/dist')))
 app.get(
-    '/home/*',
+    '/*',
     (req, res) => {
-        return res.sendFile(path.join(__dirname + 'client/dist/index.html'))
+        return res.sendFile(path.join(__dirname + '/client/dist/index.html'))
     }
 )
 

@@ -1,23 +1,16 @@
+<script>
+export default {};
+</script>
+
 <template>
   <div id="app">
-    {{ message }}
+    <router-view></router-view>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      message: 'Hello There',
-    };
-  },
-};
-</script>
 
 <style>
 #app {
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  color: blue;
+  font-family: "Roboto", sans-serif;
 }
 </style>

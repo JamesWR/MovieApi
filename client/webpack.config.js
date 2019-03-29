@@ -7,7 +7,7 @@ module.exports = {
     rules: [
       { test: /\.js$/, use: 'babel-loader' },
       { test: /\.vue$/, use: 'vue-loader' },
-      { test: /\.css$/, use: ['vue-style-loader', 'css-loader']},
+      { test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
     ]
   },
   plugins: [
@@ -15,5 +15,10 @@ module.exports = {
       template: './src/index.html',
     }),
     new VueLoaderPlugin(),
-  ]
+  ],
+  devServer: {
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  }
 };
