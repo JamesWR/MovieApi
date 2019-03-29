@@ -10,6 +10,8 @@
   "scripts": {
     "build": "cd client && yarn build",
     "start": "nodemon --exec babel-node index.js",
+    "client": "cd client && yarn dev",
+    "dev": "concurrently \"yarn start\" \"yarn client\"",
     "postinstall": "cd client && yarn",
     "test": "mocha --require @babel/register -R spec spec.js"
   },
@@ -19,6 +21,7 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/register": "^7.4.0",
     "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
     "eslint": "^5.15.3",
     "express": "^4.16.4",
     "http": "^0.0.0",
