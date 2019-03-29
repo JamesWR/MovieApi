@@ -3,7 +3,6 @@ import axios from 'axios'
 
 export default {
     async get(req) {
-        console.log(req.query)
         return axios.get(
             config.apiBase + 'search/movie',
             {

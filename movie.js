@@ -3,7 +3,6 @@ import axios from 'axios'
 
 export default {
     async get(req) {
-        console.log(req.params.movieId)
         return axios.get(
             config.apiBase + `movie/${req.params.movieId}`,
             {

@@ -2,8 +2,9 @@
 <script>
 import axios from "axios";
 import Vue from "vue";
+import moviePreview from "./moviePreview.vue";
 export default {
-  components: {},
+  components: { moviePreview },
   data() {
     return {
       searches: [],
@@ -41,11 +42,13 @@ export default {
   <div>
     <input v-model="search" @input="updateSearch">
     <div v-for="movie in movies" :key="movie.id">
-      <router-link :to="{ name: 'movie', params: { id: movie.id} }">{{movie.title}} {{movie.id}}</router-link>
+      <router-link :to="{ name: 'movie', params: { id: movie.id} }">
+        <movie-preview :movie="movie"></movie-preview>
+      </router-link>
     </div>
   </div>
 </template>
 
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 </style>

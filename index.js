@@ -16,7 +16,6 @@ app.get('/api/popular', async (req, res, next) => {
 })
 app.get('/api/search', async (req, res, next) => {
     try {
-        console.log(req.query)
         const result = await search.get(req, res)
         res.json(result.data)
     } catch (e) {
