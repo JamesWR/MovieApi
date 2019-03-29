@@ -4,7 +4,7 @@
   "description": "client side code for movie finding webpage",
   "main": "main.js",
   "scripts": {
-    "server": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode development",
     "build": "webpack"
   },
   "author": "James Wolz-Romberger",
